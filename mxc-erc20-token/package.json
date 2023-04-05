@@ -1,0 +1,41 @@
+{
+  "name": "mxc",
+  "version": "1.0.0",
+  "description": "mxc",
+  "main": "index.js",
+  "author": "frank",
+  "license": "MIT",
+  "scripts": {
+    "build": "npx hardhat compile --config ./hardhat.config.js",
+    "profile": "REPORT_GAS=true npx hardhat test --config ./hardhat.config.js",
+    "coverage": "npx hardhat coverage --solcoverjs ./.solcover.js",
+    "compile": "npx hardhat compile",
+    "test": "npx hardhat test",
+    "lint:check:solhint": "solhint --config ./.solhint.json --ignore-path ./.solhintignore contracts/**/*.sol",
+    "deploy:goerli": "npx hardhat run scripts/deploy_testnet.js --network goerli",
+    "deploy:sepolia": "npx hardhat run scripts/deploy_testnet.js --network sepolia",
+    "deploy:mainnet": "npx hardhat run scripts/deploy.js --network mainnet",
+    "verify:testnet": "npx hardhat verify --contract contracts/MXC.sol:MXC --network sepolia DEPLOYED_CONTRACT_ADDRESS 'Constructor argument 1'"
+  },
+  "devDependencies": {
+    "@ethersproject/abi": "^5.7.0",
+    "@ethersproject/providers": "^5.7.2",
+    "@nomicfoundation/hardhat-chai-matchers": "^1.0.6",
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.8",
+    "@nomicfoundation/hardhat-toolbox": "^2.0.1",
+    "@nomiclabs/hardhat-ethers": "^2.2.2",
+    "@nomiclabs/hardhat-etherscan": "^3.1.6",
+    "@typechain/ethers-v5": "^10.2.0",
+    "@typechain/hardhat": "^6.1.5",
+    "chai": "^4.3.7",
+    "dotenv": "^16.0.3",
+    "ethers": "5.4",
+    "hardhat": "^2.12.7",
+    "hardhat-gas-reporter": "^1.0.9",
+    "solidity-coverage": "^0.8.2",
+    "typechain": "^8.1.1"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.8.2"
+  }
+}

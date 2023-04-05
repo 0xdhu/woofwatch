@@ -1,0 +1,42 @@
+/node_modules
+.env
+.private
+.cache
+.DS_Store
+
+# coverage
+coverage.json
+typechain-types
+yarn-error.log
+
+#Hardhat files
+/artifacts
+artifacts/
+artifacts-ref/
+hh-cache/
+hh-cache-ref/
+
+#foundry test compilation files
+/cache
+cache
+out
+reference-out
+optimized-out
+reference-working
+
+# VScode
+.vscode
+__pycache__
+
+#Test contract
+NFTFactory.sol
+SecondSkinNFT.sol
+TAVA.sol
+ThirdPartyNFT.sol
+ThirdPartyToken.sol
+TokenFactory.sol
+
+#Local deploy
+deploy_local.js
+
+yarn-error.log
